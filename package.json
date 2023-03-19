@@ -1,0 +1,29 @@
+{
+  "name": "mstd-lab2",
+  "version": "1.0.0",
+  "description": "KPI MTSD Lab2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alzex/mstd-lab2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alzex/mstd-lab2/issues"
+  },
+  "homepage": "https://github.com/Alzex/mstd-lab2#readme",
+  "dependencies": {
+    "jest": "^29.5.0",
+    "ts-jest": "^29.0.5",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.5.0",
+    "@types/jest": "^29.5.0",
+    "typescript": "^5.0.2"
+  }
+}
