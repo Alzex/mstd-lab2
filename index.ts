@@ -6,7 +6,13 @@ export class List {
       throw new Error('Invalid item');
     }
   }
-
+    
+  private validateIndex(index: number): void {
+    if (index < 0 || index >= this.items.length) {
+      throw new Error('Invalid index');
+    }
+  }
+  
   length(): number {
     return this.items.length;
   }
@@ -17,6 +23,7 @@ export class List {
   }
 
   insert(item: string, index: number): void {
+    this.validateIndex(item);
     this.validateItem(item);
     this.items.splice(index, 0, item);
   }
@@ -30,9 +37,7 @@ export class List {
   }
 
   get(index: number): string {
-    if (index < 0 || index >= this.items.length) {
-      throw new Error('Invalid index');
-    }
+    this.validateIndex(item);
     return this.items[index];
   }
 
