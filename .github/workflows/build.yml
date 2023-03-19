@@ -8,8 +8,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Build and Test
+      - name: Test
         run: |
-          make clean
-          make test
-          make
+          npm ci
+          npm test
