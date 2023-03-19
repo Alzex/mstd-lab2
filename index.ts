@@ -23,7 +23,7 @@ export class List {
   }
 
   insert(item: string, index: number): void {
-    this.validateIndex(item);
+    this.validateIndex(index);
     this.validateItem(item);
     this.items.splice(index, 0, item);
   }
@@ -37,7 +37,7 @@ export class List {
   }
 
   get(index: number): string {
-    this.validateIndex(item);
+    this.validateIndex(index);
     return this.items[index];
   }
 
