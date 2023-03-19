@@ -47,10 +47,12 @@ describe('List', () => {
     });
 
     it('should throw an error if item is empty', () => {
+      list.append('a');
       expect(() => list.insert('', 0)).toThrowError('Invalid item');
     });
 
     it('should throw an error if item is longer than one character', () => {
+      list.append('a');
       expect(() => list.insert('ab', 0)).toThrowError('Invalid item');
     });
   });
@@ -66,13 +68,20 @@ describe('List', () => {
     });
   });
 
-  describe('deleteAll(), clear()', () => {
-    it('should delete all items', () => {
+  describe('deleteAll()', () => {
+    it('should delete all items with the given value', () => {
       list.append('a');
       list.append('b');
+      list.append('a');
       list.append('c');
-      list.deleteAll();
-      expect(list.length()).toBe(0);
+      list.deleteAll('a');
+      expect(list.get(0)).toBe('b');
+      expect(list.get(1)).toBe('c');
+    });
+  });
+
+  describe('clear()', () => {
+    it('should delete all items', () => {
       list.append('a');
       list.append('b');
       list.append('c');

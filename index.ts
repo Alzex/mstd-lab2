@@ -32,8 +32,8 @@ export class List {
     this.items.splice(index, 1);
   }
 
-  deleteAll(): void {
-    this.items = [];
+  deleteAll(value: string): void {
+    this.items = this.items.filter((item) => item !== value);
   }
 
   get(index: number): string {
